@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  
+
   <head>
     <meta charset="UTF-8">
     <title>Dev FeatureBranch Workflow</title>
@@ -12,11 +12,24 @@
       }
     </style>
   </head>
-  
   <body>
     <canvas id="gitGraph"></canvas>
-	 <script src="gitGraphSrc/gitgraph.js"></script>
+    <script src="jquery-1.12.0.js"></script>
+    <script src="gitGraphSrc/gitgraph.js"></script>
     <script src="FeatureBranchDev.js"></script>
+    <div id="allButtons">
+<!--       <button onclick="switchToDev()">Dev</button>
+      <button onclick="switchToQA()">QA</button> -->
+      <button onclick="addCommit()">Commit</button>
+      <button id="Tcommit">TesterCommit</button><br>
+      <form>
+        Branch Name:<br>
+        <input type = "text" id="nBranch" name = "newBranch"><br>
+      </form><br>
+      <button id="btnSubmit">Create Feature Branch</button>
+      <button id="mergeIn">Merge in</button>
+    </div>
+
   </body>
 
 </html>
